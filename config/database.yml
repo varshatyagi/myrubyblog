@@ -8,20 +8,23 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
-  username: newput
-  password: root
+  username: iiujvhpirpitxh
+  host: ec2-107-21-221-59.compute-1.amazonaws.com
+  port: 5432
+  url: postgres://iiujvhpirpitxh:nGV_X9DDOWbhEK62kBYJQHCSei@ec2-107-21-221-59.compute-1.amazonaws.com:5432/da6kt1qec1p23
+  psql: heroku pg:psql --app secret-peak-7782 DATABASE
 
 development:
   <<: *default
-  database: myrubyblog
+  database: da6kt1qec1p23
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: myrubyblog
+  database: da6kt1qec1p23
 
 production:
   <<: *default
-  database: myrubyblog
+  database: da6kt1qec1p23
